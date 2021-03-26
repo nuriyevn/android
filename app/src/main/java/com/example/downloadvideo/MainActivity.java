@@ -33,9 +33,6 @@ public class MainActivity extends AppCompatActivity {
     // Progress Dialog
     private ProgressDialog pDialog;
     public static final int progress_bar_type = 0;
-
-    // File url to download
-    //private static String file_url = "http://www.qwikisoft.com/demo/ashade/20001.kml";
     private static String file_url = "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4";
 
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -61,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
 
         if (Build.VERSION.SDK_INT >= 23) {
-            //динамическое получение прав на WRITE_EXTERNAL_STORAGE
             if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
                 Log.d(TAG, "Permission is granted");
